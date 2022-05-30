@@ -1,0 +1,92 @@
+<div class="flex-fill">
+   <h3>Chat</h3>
+
+   <form id="chat-form">
+      <div class="mb-1">
+         <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Introduce tu correo"
+         />
+      </div>
+      <div class="mb-1">
+         <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            value=""
+            placeholder="Introduce tu nombre"
+         />
+      </div>
+      <div class="mb-1">
+         <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            name="apellido"
+            value=""
+            placeholder="Introduce tu apellido"
+         />
+      </div>
+      <div class="mb-1">
+         <input
+            type="number"
+            class="form-control"
+            id="edad"
+            name="edad"
+            value=""
+            placeholder="Introduce tu edad"
+         />
+      </div>
+      <div class="mb-1">
+         <input
+            type="text"
+            class="form-control"
+            id="alias"
+            name="alias"
+            value=""
+            placeholder="Introduce un nickname"
+         />
+      </div>
+      <div class="mb-4">
+         <input
+            type="url"
+            class="form-control"
+            id="avatar"
+            name="avatar"
+            value=""
+            placeholder="Introduce el link de una imágen para tu avatar"
+         />
+      </div>
+      <div class="input-group">
+         <input
+            class="form-control"
+            id="inputChat"
+            type="text"
+            placeholder="Escribe tu mensaje"
+            autocomplete="off"
+         />
+         <button id="botonChat" class="btn btn-success">
+            <i class="fas fa-paper-plane"></i>
+            Send
+         </button>
+      </div>
+   </form>
+   <div id="chat-container">
+      <div class="text-center p-1 mb-0" id="actions">
+
+      </div>
+      <div class="chat-mensajes" id="chat-mensajes">
+         {{! <div class='mensaje m-0'>
+         <p id='datos' class='opacity-50 badge bg-primary mb-0'>
+           imix
+           <span class='mx-3 text-dark badge bg-warning'>9:12pm</span>
+         </p>
+         <p class='lead'>Lorem ipsum dolor sit.</p>
+       </div> }}
+      </div>
+   </div>
+</div>

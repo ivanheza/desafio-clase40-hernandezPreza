@@ -1,0 +1,44 @@
+<div class="px-4 py-5 my-5 text-center">
+   <h1 class="display-5 fw-bold">Process Info</h1>
+   <div class="container w-50">
+      <ul class="list-group text-start">
+         <li class="list-group-item">
+            Argumentos de Entrada:
+            <strong>{{p.argumentos}}</strong>
+         </li>
+         <li class="list-group-item">
+            Plataforma:
+            <strong>{{p.OS}}</strong>
+         </li>
+         <li class="list-group-item">
+            Versión Node:
+            <strong>{{p.nodeVer}}</strong>
+         </li>
+         <li class="list-group-item">
+            Memoria Total Reservada:
+            <strong>{{p.memoria.rss}}</strong>
+         </li>
+         <li class="list-group-item">
+            Path de ejecución:
+            <strong>{{p.path}}</strong>
+         </li>
+         <li class="list-group-item">
+            Process ID:
+            <strong>{{p.pID}}</strong>
+         </li>
+         <li class="list-group-item">
+            Carpeta del proyecto:
+            <strong>{{p.folder}}</strong>
+         </li>
+         <li class="list-group-item">
+            Número CPUs:
+            <strong>{{p.numCPUs}}</strong>
+         </li>
+         <li class="list-group-item">
+            PUERTO: http://localhost/:
+            <strong>{{p.PORT}}</strong>
+         </li>
+      </ul>
+   </div>
+
+</div>

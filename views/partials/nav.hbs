@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark text-light">
+   <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"> </span>
+      <ul class="navbar-nav me-auto mx-5">
+         <li class="nav-item">
+            {{#if user}}
+               <h1>Bienvenido
+
+               </h1>
+               <h4 class="lead"> {{{user.name}}}</h4>
+               <p class="lead"> {{user.email}} </p>
+               <img height="50" src={{user.profilePhoto}} alt="" />
+            {{else}}
+
+            {{/if}}
+         </li>
+      </ul>
+      {{#if user}}
+         <a href="/logout" class="btn btn-danger btn-small">Logout</a>
+
+      {{else}}
+      {{/if}}
+   </div>
+</nav>

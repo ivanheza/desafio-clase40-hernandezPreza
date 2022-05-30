@@ -1,0 +1,48 @@
+<div class="px-4 py-2 my-5 text-center">
+   <h1 class="display-5 fw-bold">Login</h1>
+   <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Introduce tus datos para iniciar sesión</p>
+      {{#if msg}}
+         <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+            <h4>{{msg}}</h4>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="alert"
+               aria-label="Close"
+            ></button>
+
+         </div>
+      {{else}}
+      {{/if}}
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-2">
+         <form action="http://localhost:9000/login" method="POST">
+            <div class="form-group">
+               <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Introduce tu email"
+               />
+            </div>
+            <div class="form-group mt-2">
+               <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Introduce tu contraseña"
+               />
+            </div>
+            <button class="btn btn-success mt-3">Login</button>
+         </form>
+      </div>
+      <hr />
+      <div>
+         <h4>¿No estás registrado aún?</h4>
+         <p class="lead">Regístrate ahora.</p>
+         <a href="/signup" class="btn btn-primary mt-3">Signup</a>
+      </div>
+   </div>
+</div>
