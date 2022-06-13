@@ -50,11 +50,30 @@ class ProductosMongoDao extends DAO {
             return false
          }
          //console.log("EXISTEE!!", existe)
-         await this.collection.deleteOne({_id: id})
+         const deleted = await this.collection.deleteOne({_id: id})
 
-         return "El Producto Se Borro !"
+         return deleted
       } catch (error) {
          const err = new CustomError(500, "Error en borrar!!", error)
+         throw err
+      }
+   }
+   async actualizar(id, productoData) {
+      try {
+         console.log("DATA", productoData)
+
+         let productoActual = await this.collection.findById(id)
+         if (!productoActual) {
+            return false
+         }
+         productoActual = await this.collection.findByIdAndUpdate(id, productoData, {
+            new: true,
+            runValidators: true,
+            useUnified: true,
+         })
+         return productoActual
+      } catch (error) {
+         const err = new CustomError(500, "Error en borrar!!", error.message)
          throw err
       }
    }

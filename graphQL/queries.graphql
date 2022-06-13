@@ -1,0 +1,7 @@
+{
+   getProducts {
+      name
+      price
+      _id
+   }
+}

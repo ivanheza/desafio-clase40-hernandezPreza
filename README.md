@@ -1,15 +1,24 @@
-# DESAFÍO MEJORANDO ARQUITECTURA DE NUESTRA API
+# DESAFÍO GRAPHQL
 
 -  Acceder al proyecto en la dirección **http://localhost:9000**
 
 \*\*Para este desafío se modificó la persistencia de los datos integrando los conceptos DAO,DTO y FACTORY con las tecnologías de FileSystem y MONGODB.
 
-## Consignas
-
--  Se definió una misma lógica para la persistencia en el factory para los productos y mensajes.
 -  El DAO se selecciona según la persistencia que se necesite, por default es MONGO.
+
    _MongoDB:_ node server.js --MONGO
    _FileSystem:_ node server.js --FS
+
+## Consignas
+
+-  Se definió la ruta /graphql para el uso de la CLI de Graphql dentro de la carpeta graphql se encuentra el schema y el controlador para el mismo.
+   Se realizaron pruebas para:
+
+1. Obtener productos: getProducts{}
+2. Obtener un producto por ID: getProduct(id:""){}
+3. Crear un producto nuevo: newProduct (input:{}) {}
+4. Editar producto: editProduct (id:id, data:{}) {}
+5. Borrar un producto: deleteProduct(id:id){}
 
 ### Loggueo
 

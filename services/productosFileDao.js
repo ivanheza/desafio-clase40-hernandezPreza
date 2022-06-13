@@ -45,10 +45,10 @@ class ProductosDAOFile extends DAO {
       }
    }
    // Metodo para actualizar datos
-   async actualizar(data) {
+   async actualizar(id, data) {
       try {
          const array = await this.readData()
-         const datoActual = array.findIndex((d) => d.id == data.id)
+         const datoActual = array.findIndex((d) => d._id == id)
          console.log(datoActual)
          if (datoActual == -1) {
             throw new Error(`Error al actualizar: no se encontró el id ${elem.id}`)

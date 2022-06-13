@@ -24,6 +24,9 @@ import "./middleware/passport-facebook.js"
 ////--- WINSTON
 import logger from "./helpers/winston.js"
 
+////--- GraphQl
+import {graphqlHTTP} from "express-graphql"
+import {root, schemaP} from "./graphQL/schema_prod.js"
 ///----------- Cluster Inicio
 import config from "./config/config.js"
 import cluster from "cluster"
@@ -95,6 +98,15 @@ if (cluster.isPrimary && serverMode == "CLUSTER") {
    ///---- Rutas API REST
    app.use("/info", processRouter)
    app.use("/api", productosRouter)
+
+   app.use(
+      "/graphql",
+      graphqlHTTP({
+         schema: schemaP,
+         rootValue: root,
+         graphiql: true,
+      })
+   )
 
    ///---- rutas para el login y home
    app.use(loginRouter)
